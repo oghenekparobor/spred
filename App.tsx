@@ -1,12 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React from 'react';
-import type { PropsWithChildren } from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -17,14 +10,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import Search from './assets/svg-components/search';
 import Download from './assets/svg-components/download';
@@ -40,10 +25,6 @@ import NewRelease from './assets/svg-components/new-release';
 import Downloads from './assets/svg-components/download-icon';
 import Spred from './assets/svg-components/spred';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
 function Section(): JSX.Element {
   return (
     <View style={styles.sectionContainer}>
@@ -56,7 +37,7 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: '#353535',
     flex: 1,
     paddingBottom: 10
   };
