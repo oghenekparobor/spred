@@ -82,6 +82,60 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+      {/* App bar starts */}
+      <View style={{
+        flexDirection: "row",
+        display: "flex",
+        paddingHorizontal: 10,
+        paddingTop: 24,
+      }}>
+        <Avatar />
+        <View style={styles.horizontalSpacer} />
+        <Search />
+        <View style={styles.horizontalSpacer} />
+        <Download />
+        <View style={styles.horizontalSpacer} />
+        <Add />
+        <View style={styles.spacer} />
+        <Logo />
+      </View>
+      {/* App bar ends */}
+      <View style={styles.verticalSpacer} />
+      {/* Tab starts */}
+      <View style={{
+        flexDirection: "row",
+        alignItems: "center",
+        paddingHorizontal: 10,
+        marginBottom: 10,
+      }}>
+        <View style={{
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+          <Home />
+          <View style={{
+            width: 24,
+            height: 3,
+            backgroundColor: "#ffffff",
+            marginTop: 5
+          }} />
+        </View>
+
+        <View style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          paddingHorizontal: 5,
+        }}>
+          <Text style={styles.tabText}>ORIGINAL</Text>
+          <Text style={styles.tabText}>MOVIES</Text>
+          <Text style={styles.tabText}>SERIES</Text>
+          <Text style={styles.tabText}>SKIT</Text>
+        </View>
+        <Slide />
+      </View>
+      {/* Tab ends */}
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -89,58 +143,9 @@ function App(): JSX.Element {
           style={{
             backgroundColor: "#353535",
             paddingHorizontal: 10,
-            paddingTop: 24,
-          }}>
-          {/* App bar starts */}
-          <View style={{
-            flexDirection: "row",
-            display: "flex",
-          }}>
-            <Avatar />
-            <View style={styles.horizontalSpacer} />
-            <Search />
-            <View style={styles.horizontalSpacer} />
-            <Download />
-            <View style={styles.horizontalSpacer} />
-            <Add />
-            <View style={styles.spacer} />
-            <Logo />
-          </View>
-          {/* App bar ends */}
-          <View style={styles.verticalSpacer} />
-          {/* Tab starts */}
-          <View style={{
-            flexDirection: "row",
-            alignItems: "center"
-          }}>
-            <View style={{
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center"
-            }}>
-              <Home />
-              <View style={{
-                width: 24,
-                height: 3,
-                backgroundColor: "#ffffff",
-                marginTop: 5
-              }} />
-            </View>
 
-            <View style={{
-              flex: 1,
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              paddingHorizontal: 5,
-            }}>
-              <Text style={styles.tabText}>ORIGINAL</Text>
-              <Text style={styles.tabText}>MOVIES</Text>
-              <Text style={styles.tabText}>SERIES</Text>
-              <Text style={styles.tabText}>SKIT</Text>
-            </View>
-            <Slide />
-          </View>
-          {/* Tab ends */}
+          }}>
+
           <View style={styles.verticalSpacer} />
           {/* Banner starts here */}
           <View style={{
